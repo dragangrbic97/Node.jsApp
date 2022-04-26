@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyPage</title>
+</head>
+<style>
+    body {
+        font-family: Tahoma, sans-serif;
+    }
+</style>
+<body style="background-color:#7dadd9">
+
+<h1 style="background-color:#0099ff;font-size:220%;text-align:center;"> Formular za unos podataka</h1>
+
+<form action="/user/add" method="POST">
+    <fieldset>
+        NOVI UNOS<br>
+        <label>ID:</label>
+        <input id="id_field" type="text" name="id" size="12" maxlength="13" style="font-size:120%" required> (13 characters)!
+        <br><br>
+        <label>Ime:</label>
+        <input id="name" type="text" name="name" size="25" style="font-size:120%">
+        <br><br>
+        <label>Prezime:</label>
+        <input id="lname" type="text" name="lname" size="25" style="font-size:120%">
+        <br><br>
+        <label>Datum rođenja:</label>
+        <input id="birthdate" type="date" name="bdate" size="25" style="font-size:110%">
+        <br><br>
+        <label>Pol:</label> &nbsp;&nbsp;&nbsp;
+        <input type="radio" name="sex" size="20" value="Muski"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="sex" size="20" value="Zenski"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="sex" size="20" value="Drugo">
+        <br>
+        <sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;Muški&emsp;&nbsp;&nbsp;Ženski&emsp;&nbsp;Drugo</sup><br><br>
+        <label>Zaposlen:</label>
+        <input type="checkbox" name="job" size="25" value=1>
+        <br><br>
+        <button id="reset" type="reset">Reset</button>
+        <button id="submit" type="submit">Potvrdi</button>
+    </fieldset>
+</form>
+
+<form action="/user/all" method="GET">
+    <fieldset>
+        PREGLED SVIH UNOSA
+        <button type="submit" >Prikazi</button>
+    </fieldset>
+</form>
+
+<form action="/user/delete" method="POST">
+    <fieldset >
+        BRISANJE UNOSA
+        <br>
+        <label>ID:</label>
+        <input type="text" name="id" >
+        <br><br>
+        <button id="reset" type="reset">Reset</button>
+        <button id="submit" type="submit">Potvrdi</button>
+    </fieldset>
+</form>
+
+<form action="/user/id" method="GET">
+    <fieldset >
+        PRIKAZ UNOSA PO ID
+        <br>
+        <label>ID:</label>
+        <input type="text" name="id" >
+        <br><br>
+        <button id="reset" type="reset">Reset</button>
+        <button id="submit" type="submit">Potvrdi</button>
+    </fieldset>
+</form>
+
+<form action="/user/update" method="POST">
+    <fieldset>
+        UPDATE UNOSA
+        <br>
+        <label>ID:</label>
+        <input id="id_field" type="text" name="id" size="12" maxlength="13" style="font-size:120%" required> (13 characters)!
+        <br><br>
+        <label>Ime:</label>
+        <input id="name" type="text" name="name" size="25" style="font-size:120%">
+        <br><br>
+        <label>Prezime:</label>
+        <input id="lname" type="text" name="lname" size="25" style="font-size:120%">
+        <br><br>
+        <label>Datum rođenja:</label>
+        <input id="birthdate" type="date" name="bdate" size="25" style="font-size:110%">
+        <br><br>
+        <label>Pol:</label> &nbsp;&nbsp;&nbsp;
+        <input type="radio" name="sex" size="20" value="Muski"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="sex" size="20" value="Zenski"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="sex" size="20" value="Drugo">
+        <br>
+        <sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;Muški&emsp;&nbsp;&nbsp;Ženski&emsp;&nbsp;Drugo</sup><br><br>
+        <label>Zaposlen:</label>
+        <input type="checkbox" name="job" size="25" value=1>
+        <br><br>
+        <button id="reset" type="reset">Reset</button>
+        <button id="submit" type="submit">Potvrdi</button>
+    </fieldset>
+</form>
+
+</body>
+</html>

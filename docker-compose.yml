@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  sqldb:
+    container_name: sqldb
+    image: keinos/sqlite3:3.38.2
+    volumes:
+      - sqldb_data:/home/dragan/Desktop/materijali_učenje/zadatak-projectv2/db/database.db
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    networks:
+      - b2net
+
+  app:
+    container_name: nodeapp
+    depends_on:
+      - sqldb
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - '3001:3000'
+    stdin_open: true
+    tty: true
+    networks:
+      - b2net
+
+networks:
+  b2net:
+    driver: bridge
+    name: b2net
+
+volumes:
+  sqldb_data:
