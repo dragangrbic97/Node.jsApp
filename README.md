@@ -1,6 +1,7 @@
 # NodeApp
 NodeApp is Node.js application for dealing with database through 
-HTML web page form.
+HTML web page form. The project uses ![node-v](https://img.shields.io/badge/node-12.18.3-blue) version and 
+![Sqlite3](https://img.shields.io/badge/sqlite3-5.0.7-red) version.
 
 ## *Installation*
 After the repository cloning open terminal in working directory and
