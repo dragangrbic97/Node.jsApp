@@ -33,7 +33,7 @@ const User = sequelize.define('users',{
         },
         job: {
             type: Sequelize.DataTypes.INTEGER,
-            default: 0
+            defaultValue: 0
         }
     },
     {timestamps: false}

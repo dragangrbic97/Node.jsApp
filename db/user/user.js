@@ -1,5 +1,4 @@
-const {User} = require ('../dbconnect')
-const {response} = require("express");
+const {User} = require ('../dbconnect');
 
 async function addUser(userData) {
     try {

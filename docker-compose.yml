@@ -4,7 +4,7 @@ services:
     container_name: sqldb
     image: keinos/sqlite3:3.38.2
     volumes:
-      - sqldb_data:/home/dragan/Desktop/materijali_učenje/zadatak-projectv2/db/database.db
+      - sqldb_data:/zadatak-projectv2/db/database.db
     restart: unless-stopped
     tty: true
     stdin_open: true
